@@ -1,0 +1,85 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 5%;
+}
+
+.keyboard {
+    background-color: lightgrey;
+    border-radius: 5px;
+    padding: .1em .1em .1em .1em;
+}
+
+.keyboard_row {
+    display: grid;
+    padding: .1em .1em .1em .1em;
+}
+
+.keyboard_key {
+    background-color: whitesmoke;
+    border: lightgray solid 1px;
+    padding: 1em 1em 1em 1em;
+    margin: 0em .1em 0em .1em;
+    text-align: center;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+.shifted {
+    text-transform: uppercase;
+}
+
+.sub {
+    color: lightgray;
+}
+
+.sub-active {
+    color: black
+}
+
+div[data-row="1"] {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+}
+
+div[data-row="2"] {
+    grid-template-columns: 1.25fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+div[data-row="3"] {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.75fr;
+}
+
+div[data-row="4"] {
+    grid-template-columns: 1.25fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2.25fr;
+}
+
+div[data-row="5"] {
+    grid-template-columns: 1fr 1fr 1fr 6fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.active {
+    color: whitesmoke;
+    animation-name: press-animation;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes press-animation {
+    0%     {
+        background-color:whitesmoke;
+    
+    }
+    100.0%  {
+        background-color:black;
+    }
+}
+
+@keyframes press-animation {
+    0%     {
+        background-color:whitesmoke;
+    }
+    100.0%  {
+        background-color:black;
+    }
+}
